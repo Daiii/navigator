@@ -24,6 +24,6 @@
     * 修改bootstrap.servers
     * 修改sasl.jaas.config中用户名和密码
   * 页面配置
-    * 访问[localhost:8081/createProperties](http://localhost:8081/createProperties)
+    * 访问[localhost:8081/create(http://localhost:8081/create)
 * 启动服务，访问[localhost:8081](http://localhost:8081)
 * 如需要其他功能请自行添加
