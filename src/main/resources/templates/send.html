@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Message</title>
+    <link rel="icon" href="icon/send.png"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.theme.min.css"/>
+    <script src="js/bootstrap.min.js" type="application/javascript"></script>
+    <style>
+        #sendButton{width: 100%;}
+        #previousButton{width: 100%;}
+    </style>
+</head>
+<body>
+<form method="POST" action="/sendMessage">
+    <div class="mb-3">
+        <div class="mb-3">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-success">Send Message</li>
+            </ul>
+        </div>
+        <div class="mb-3">
+            <label for="propertiesName" class="form-label">Properties</label>
+            <select class="form-select" aria-label="Default select example" id="propertiesName" name="propertiesName">
+                <#list configs as item>
+                <option value="${item}">${item}</option>
+                </#list>
+            </select>
+        </div>
+        <div clmss="mb-3">
+            <label for="topic" class="form-label">Topic</label>
+            <input name="topic" type="text" class="form-control" id="topic" placeholder="topic">
+        </div>
+        <div class="mb-3">
+            <label for="headers" class="form-label">Headers</label>
+            <textarea name="headers" class="form-control" id="headers" rows="4"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea name="message" class="form-control" id="message" rows="6"></textarea>
+        </div>
+        <div class="mb-3">
+            <button id="sendButton" type="submit" class="btn btn-primary">Send</button>
+        </div>
+        <div class="mb-3">
+            <button id="previousButton" type="button" class="btn btn-link"><a href="/">Previous</a></button>
+        </div>
+    </div>
+</form>
+</body>
+</html>

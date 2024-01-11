@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Properties</title>
+    <link rel="icon" href="icon/list.png"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.theme.min.css"/>
+    <script src="js/bootstrap.min.js" type="application/javascript"></script>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="mb-3">
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-success">Properties List</li>
+        <#list configs as item>
+        <li class="list-group-item list-group-item-action"><a href="/info?propertiesName=${item}">${item}</a></li>
+        </#list>
+    </ul>
+</div>
+<div class="mb-3">
+    <center>
+        <button id="previousButton" type="button" class="btn btn-link"><a href="/">Previous</a></button>
+    </center>
+</div>
+</body>
+</html>

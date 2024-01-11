@@ -1,0 +1,11 @@
+${AnsiColor.BRIGHT_YELLOW}${AnsiStyle.BOLD}
+
+  _     _      () _   _   /7  _   _
+ / \/7,'o|/7/7/7,'o|,'o| /_7,'o| //7
+/_n_/ |_,7|,'// |_,'|_,7//  |_,'//
+                _//
+
+${AnsiColor.CYAN}${AnsiStyle.BOLD}
+::  Java                 ::  (v${java.version})
+::  Spring Boot          ::  (v${spring-boot.version})
+${AnsiStyle.NORMAL}

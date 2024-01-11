@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="icon" href="icon/result.png"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.theme.min.css"/>
+    <script src="js/bootstrap.min.js" type="application/javascript"></script>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="mb-3">
+    <#assign color = "Blue" >
+    <#assign result = "success">
+    <#if state=="success">
+        <#assign color = "Blue" >
+        <#assign result = "success">
+    <#else>
+        <#assign color = "Red" >
+        <#assign result = "danger">
+    </#if>
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-${result}">Result</li>
+    </ul>
+</div>
+<div class="mb-3">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Field</th>
+            <th scope="col">Info</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>State</td>
+            <td style="font-weight:bold; color:${color}">${state}</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Message</td>
+            <td>${message}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="mb-3">
+    <center>
+        <button id="previousButton" type="button" class="btn btn-link"><a href="/send">Previous</a></button>
+    </center>
+</div>
+</body>
+</html>

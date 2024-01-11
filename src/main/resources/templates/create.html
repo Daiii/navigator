@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Properties</title>
+    <link rel="icon" href="icon/edit.png"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.theme.min.css"/>
+    <script src="js/bootstrap.min.js" type="application/javascript"></script>
+    <style>
+        #sendButton{width: 100%;}
+        #previousButton{width: 100%;}
+    </style>
+</head>
+<body>
+<form method="POST" action="/createProperties">
+    <div class="mb-3">
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-success">Create Properties</li>
+        </ul>
+    </div>
+    <div class="mb-3">
+        <label for="fileName" class="form-label">File Name</label>
+        <input name="fileName" type="text" class="form-control" id="fileName" placeholder="must be .properties">
+    </div>
+    <div class="mb-3">
+        <label for="properties" class="form-label">Properties</label>
+        <textarea name="content" class="form-control" id="properties" rows="15"></textarea>
+    </div>
+    <div class="mb-3">
+        <button id="sendButton" type="submit" class="btn btn-primary">Create</button>
+    </div>
+    <div class="mb-3">
+        <button id="previousButton" type="button" class="btn btn-link"><a href="/">Previous</a></button>
+    </div>
+</form>
+</body>
+</html>
