@@ -1,4 +1,4 @@
-package com.sns.navigator.config;
+package com.tool.navigator.config;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.io.IoUtil;

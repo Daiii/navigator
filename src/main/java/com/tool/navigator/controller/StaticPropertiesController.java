@@ -1,8 +1,8 @@
-package com.sns.navigator.controller;
+package com.tool.navigator.controller;
 
-import com.sns.navigator.config.StaticPropertiesConfig;
-import com.sns.navigator.constant.Actions;
-import com.sns.navigator.model.PropertiesMode;
+import com.tool.navigator.config.StaticPropertiesConfig;
+import com.tool.navigator.constant.Actions;
+import com.tool.navigator.model.PropertiesMode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Controller;

@@ -1,6 +1,6 @@
-package com.sns.navigator.controller;
+package com.tool.navigator.controller;
 
-import com.sns.navigator.constant.Actions;
+import com.tool.navigator.constant.Actions;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package com.sns.navigator.config;
+package com.tool.navigator.config;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;

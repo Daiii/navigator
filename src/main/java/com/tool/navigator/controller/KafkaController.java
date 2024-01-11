@@ -1,8 +1,11 @@
-package com.sns.navigator.controller;
+package com.tool.navigator.controller;
 
 import java.util.HashSet;
 import java.util.Properties;
 
+import com.tool.navigator.config.StaticPropertiesConfig;
+import com.tool.navigator.kafka.KafkaClient;
+import com.tool.navigator.model.MessageModel;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Controller;
@@ -11,10 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.sns.navigator.config.StaticPropertiesConfig;
-import com.sns.navigator.constant.Actions;
-import com.sns.navigator.kafka.KafkaClient;
-import com.sns.navigator.model.MessageModel;
+import com.tool.navigator.constant.Actions;
 
 @Controller
 @DependsOn("staticPropertiesConfig")

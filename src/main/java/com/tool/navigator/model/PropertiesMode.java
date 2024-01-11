@@ -1,4 +1,4 @@
-package com.sns.navigator.model;
+package com.tool.navigator.model;
 
 import lombok.Data;
 

@@ -1,14 +1,13 @@
-package com.sns.navigator.kafka;
+package com.tool.navigator.kafka;
 
 import java.util.Properties;
 import java.util.concurrent.ExecutionException;
 
+import com.tool.navigator.model.MessageModel;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.header.Header;
-
-import com.sns.navigator.model.MessageModel;
 
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONObject;

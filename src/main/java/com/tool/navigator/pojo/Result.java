@@ -1,4 +1,4 @@
-package com.sns.navigator.pojo;
+package com.tool.navigator.pojo;
 
 import lombok.Data;
 

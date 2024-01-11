@@ -1,4 +1,4 @@
-package com.sns.navigator.advice;
+package com.tool.navigator.advice;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

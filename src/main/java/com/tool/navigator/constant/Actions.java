@@ -1,4 +1,4 @@
-package com.sns.navigator.constant;
+package com.tool.navigator.constant;
 
 /**
  * action路径
