@@ -34,3 +34,6 @@ build/
 
 ### Fleet ###
 .fleet
+
+### Maven ###
+.mvn

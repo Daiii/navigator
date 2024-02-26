@@ -1,7 +1,7 @@
 package com.tool.navigator.controller;
 
 import com.tool.navigator.config.StaticPropertiesConfig;
-import com.tool.navigator.constant.Actions;
+import com.tool.navigator.constant.ActionsMapping;
 import com.tool.navigator.model.PropertiesMode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.DependsOn;
@@ -22,25 +22,25 @@ public class StaticPropertiesController {
 
     private final StaticPropertiesConfig staticPropertiesConfig;
 
-    @GetMapping(Actions.LIST)
+    @GetMapping(ActionsMapping.LIST)
     public String list(ModelMap model) {
         model.addAttribute("configs", StaticPropertiesConfig.ALL.keySet());
-        return Actions.LIST;
+        return ActionsMapping.LIST;
     }
 
-    @GetMapping(Actions.INFO)
+    @GetMapping(ActionsMapping.INFO)
     public String info(String propertiesName, ModelMap model) {
         Map<String, String> properties = staticPropertiesConfig.mapProperties(propertiesName);
         model.addAttribute("properties", properties);
-        return Actions.INFO;
+        return ActionsMapping.INFO;
     }
 
-    @GetMapping(Actions.CREATE)
+    @GetMapping(ActionsMapping.CREATE)
     public String create() {
-        return Actions.CREATE;
+        return ActionsMapping.CREATE;
     }
 
-    @PostMapping(Actions.CREATE_PROPERTIES)
+    @PostMapping(ActionsMapping.CREATE_PROPERTIES)
     public String createProperties(@ModelAttribute("form") PropertiesMode formData, ModelMap model) {
         String fileName = formData.getFileName();
         String content = formData.getContent();

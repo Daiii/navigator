@@ -14,24 +14,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.tool.navigator.constant.Actions;
+import com.tool.navigator.constant.ActionsMapping;
 
 @Controller
 @DependsOn("staticPropertiesConfig")
 public class KafkaController {
 
-    @GetMapping(Actions.SEND)
+    @GetMapping(ActionsMapping.SEND)
     public String send(ModelMap model) {
         model.addAttribute("configs", new HashSet<String>(StaticPropertiesConfig.ALL.keySet()));
-        return Actions.SEND;
+        return ActionsMapping.SEND;
     }
 
-    @PostMapping(Actions.SEND_MESSAGE)
+    @PostMapping(ActionsMapping.SEND_MESSAGE)
     public String sendMessage(@ModelAttribute("form") MessageModel formData, ModelMap model) {
         Properties properties = StaticPropertiesConfig.ALL.get(formData.getPropertiesName());
         RecordMetadata recordMetadata = KafkaClient.sendMessage(properties, formData);
         model.addAttribute("state", "success");
         model.addAttribute("message", recordMetadata.toString());
-        return Actions.RESULT;
+        return ActionsMapping.RESULT;
     }
 }

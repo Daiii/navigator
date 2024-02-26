@@ -6,7 +6,7 @@ package com.tool.navigator.constant;
  * @author zhangbo
  * @since 1.0.1
  */
-public interface Actions {
+public interface ActionsMapping {
 
     String INDEX = "/index";
 
